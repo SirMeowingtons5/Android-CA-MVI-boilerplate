@@ -14,6 +14,9 @@ Note: this is a work-in-progress project, it may change significantly.
 * [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html)
 * Android Support Libraries
 * [Timber](https://github.com/JakeWharton/timber)
+* [Retrofit](https://square.github.io/retrofit/)
+* [Glide](https://github.com/bumptech/glide)
+* [Anko](https://github.com/Kotlin/anko)
 
 ## Thanks
 

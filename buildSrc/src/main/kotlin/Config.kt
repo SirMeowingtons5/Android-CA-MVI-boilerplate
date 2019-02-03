@@ -7,11 +7,17 @@ object Config {
         const val lifecycle = "1.1.1"
         const val constraintLayout = "1.1.0"
 
+        const val anko = "0.10.8"
+
         const val koin = "1.0.2"
 
         const val cicerone = "4.0.2"
 
         const val timber = "4.7.1"
+
+        const val retrofit = "2.5.0"
+
+        const val glide = "4.8.0"
 
         const val jUnit = "4.12"
         const val espressoCore = "3.0.2"
@@ -43,6 +49,7 @@ object Config {
         const val supportAnnotations = "com.android.support:support-annotations:${Versions.supportLibrary}"
         const val cardView = "com.android.support:cardview-v7:${Versions.supportLibrary}"
 
+        const val anko = "org.jetbrains.anko:anko:${Versions.anko}"
 
         const val cicerone = "ru.terrakok.cicerone:cicerone:${Versions.cicerone}"
 
@@ -52,6 +59,12 @@ object Config {
         const val lifecycleCompiler = "android.arch.lifecycle:compiler:${Versions.lifecycle}"
 
         const val constraintLayout = "com.android.support.constraint:constraint-layout:${Versions.constraintLayout}"
+
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+
+        const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+        const val glideAnnotationProcessor = "com.github.bumptech.glide:compiler:${Versions.glide}"
 
         //koin
         val koin = koin("core")

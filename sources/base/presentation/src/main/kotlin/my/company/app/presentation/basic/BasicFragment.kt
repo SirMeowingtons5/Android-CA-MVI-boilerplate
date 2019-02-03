@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import org.koin.android.viewmodel.ext.android.viewModelByClass
 import java.lang.reflect.ParameterizedType
 
-abstract class BasicFragment<VM : ViewModel> : Fragment() {
+abstract class BasicFragment<VM: IntentViewModel<*, *>> : Fragment() {
     @get:LayoutRes
     protected abstract val layoutId: Int
 

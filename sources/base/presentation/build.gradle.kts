@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
     implementation(Config.Libs.appCompat)
     implementation(Config.Libs.constraintLayout)
     implementation(Config.Libs.cardView)
@@ -36,9 +37,12 @@ dependencies {
 
     implementation(Config.Libs.cicerone)
 
+    implementation(Config.Libs.timber)
+
     implementation(Config.Libs.koinTest)
     implementation(Config.Libs.koinAndroid)
     implementation(Config.Libs.koinAndroidViewModel)
+
 
     implementation(Config.Libs.lifecycle)
 

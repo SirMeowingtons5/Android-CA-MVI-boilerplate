@@ -10,12 +10,6 @@ import my.company.app.presentation.navigation.Screens
 import ru.terrakok.cicerone.Router
 
 class LauncherViewModel(private val router: Router): IntentViewModel<LauncherIntent, LauncherViewState>(){
-    override val actor: Channel<LauncherViewState> = Channel()
-
-    fun reduce(action: LauncherAction, state: LauncherViewState): LauncherViewState {
-        return LauncherViewState.Loaded
-    }
-
     override fun processIntents(intents: ReceiveChannel<LauncherIntent>) {
         GlobalScope.launch(Dispatchers.Main){
             for (intent in intents){
@@ -28,7 +22,4 @@ class LauncherViewModel(private val router: Router): IntentViewModel<LauncherInt
         }
     }
 
-    override fun states(): ReceiveChannel<LauncherViewState> {
-        return actor
-    }
 }

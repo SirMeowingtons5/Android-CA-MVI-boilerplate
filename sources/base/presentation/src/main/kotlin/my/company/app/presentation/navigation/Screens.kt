@@ -5,5 +5,6 @@ import ru.terrakok.cicerone.android.support.SupportAppScreen
 object Screens {
     object Mainscreen{
         class Mainscreen: SupportAppScreen()
+        class GithubPage: SupportAppScreen()
     }
 }

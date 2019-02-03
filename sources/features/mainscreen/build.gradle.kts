@@ -28,7 +28,6 @@ android {
 }
 
 dependencies {
-    //implementation(project(":coreui"))
     implementation(project(":presentation"))
 
     implementation(Config.Libs.appCompat)
@@ -36,8 +35,14 @@ dependencies {
     implementation(Config.Libs.constraintLayout)
     implementation(Config.Libs.design)
 
+    implementation(Config.Libs.anko)
+
     implementation(Config.Libs.cicerone)
 
+    implementation(Config.Libs.timber)
+
+    implementation(Config.Libs.glide)
+    kapt(Config.Libs.glideAnnotationProcessor)
 
     implementation(Config.Libs.lifecycle)
     implementation(Config.Libs.kotlin)

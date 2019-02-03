@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="my.company.app" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
         <activity
             android:name="my.company.app.MainActivity"

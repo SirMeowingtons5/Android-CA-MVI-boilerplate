@@ -28,10 +28,6 @@ android {
     }
 }
 
-kotlin {
-    experimental.coroutines = Coroutines.ENABLE
-}
-
 dependencies {
     implementation(project(":presentation"))
 

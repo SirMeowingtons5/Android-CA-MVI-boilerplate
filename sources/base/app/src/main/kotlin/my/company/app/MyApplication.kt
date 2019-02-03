@@ -1,6 +1,7 @@
 package my.company.app
 
 import android.app.Application
+import my.company.app.domain.injection.DomainModule
 import my.company.app.injection.NavigationActionModule
 import my.company.app.injection.RouterModule
 import my.company.app.injection.ViewModelModule
@@ -18,6 +19,6 @@ class MyApplication : Application() {
     }
 
     companion object {
-        val koinModules = listOf(RouterModule, NavigationActionModule, ViewModelModule)
+        val koinModules = listOf(RouterModule, NavigationActionModule, ViewModelModule, DomainModule)
     }
 }
