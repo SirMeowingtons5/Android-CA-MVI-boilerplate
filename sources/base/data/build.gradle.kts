@@ -32,4 +32,7 @@ dependencies {
 
     implementation(Config.Libs.kotlin)
     implementation(Config.Libs.kotlinCoroutines)
+
+    implementation(Config.Libs.retrofit)
+    implementation(Config.Libs.retrofitGson)
 }
