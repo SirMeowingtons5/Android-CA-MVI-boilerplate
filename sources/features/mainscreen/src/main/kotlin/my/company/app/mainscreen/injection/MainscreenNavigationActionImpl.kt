@@ -1,8 +1,8 @@
-package my.company.app.injection
+package my.company.app.mainscreen.injection
 
 import android.content.Context
 import android.content.Intent
-import my.company.app.MainActivity
+import my.company.app.mainscreen.MainActivity
 import my.company.app.presentation.navigation.MainscreenNavigationAction
 import my.company.app.presentation.utils.intentFor
 

@@ -1,4 +1,4 @@
-package my.company.app.injection
+package my.company.app.app.injection
 
 import org.koin.dsl.module.module
 import ru.terrakok.cicerone.Cicerone

@@ -1,4 +1,4 @@
-package my.company.app.github
+package my.company.app.mainscreen.github
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager

@@ -1,10 +1,10 @@
-package my.company.app
+package my.company.app.app
 
 import android.app.Application
 import my.company.app.domain.injection.DomainModule
-import my.company.app.injection.NavigationActionModule
-import my.company.app.injection.RouterModule
-import my.company.app.injection.ViewModelModule
+import my.company.app.app.injection.NavigationActionModule
+import my.company.app.app.injection.RouterModule
+import my.company.app.app.injection.ViewModelModule
 import org.koin.android.BuildConfig
 import org.koin.android.ext.android.startKoin
 import timber.log.Timber

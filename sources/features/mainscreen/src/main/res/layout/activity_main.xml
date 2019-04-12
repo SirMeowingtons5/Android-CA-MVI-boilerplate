@@ -13,6 +13,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:context="my.company.app.MainActivity"/>
+        tools:context="my.company.app.mainscreen.MainActivity"/>
 
 </android.support.constraint.ConstraintLayout>
