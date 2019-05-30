@@ -5,7 +5,6 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.launch
 import my.company.app.presentation.basic.IntentViewModel
-import my.company.app.presentation.navigation.Screens
 import ru.terrakok.cicerone.Router
 
 class MainscreenViewModel(private val router: Router): IntentViewModel<MainscreenIntent, MainscreenViewState>() {
@@ -16,7 +15,7 @@ class MainscreenViewModel(private val router: Router): IntentViewModel<Mainscree
                 val action = intentToAction(intent)
                 when(action){
                     is MainscreenAction.InitialAction ->{
-                        router.newRootScreen(Screens.Mainscreen.GithubPage())
+                        router.newRootScreen(screenProvider.GithubPage())
                     }
                 }
             }

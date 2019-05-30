@@ -1,4 +1,4 @@
-package my.company.app.app.injection
+package my.company.app.presentation.inject
 
 import my.company.app.presentation.launcher.LauncherViewModel
 import my.company.app.presentation.mainscreen.MainscreenViewModel

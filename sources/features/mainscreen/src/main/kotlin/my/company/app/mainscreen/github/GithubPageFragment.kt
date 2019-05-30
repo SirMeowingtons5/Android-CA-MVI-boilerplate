@@ -17,7 +17,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.toast
 import timber.log.Timber
 
-class GithubPageFragment : BasicFragment<GithubPageViewModel>() {
+internal class GithubPageFragment : BasicFragment<GithubPageViewModel>() {
     override val layoutId = R.layout.fragment_github
     private val intentChannel = Channel<GithubPageIntent>()
 

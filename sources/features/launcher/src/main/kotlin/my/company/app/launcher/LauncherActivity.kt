@@ -8,30 +8,12 @@ import kotlinx.coroutines.launch
 import my.company.app.presentation.basic.BasicActivity
 import my.company.app.presentation.launcher.LauncherIntent
 import my.company.app.presentation.launcher.LauncherViewModel
-import my.company.app.presentation.navigation.MainscreenNavigationAction
-import my.company.app.presentation.navigation.Screens
-import org.koin.android.ext.android.inject
-import ru.terrakok.cicerone.Navigator
-import ru.terrakok.cicerone.commands.Forward
+import ru.terrakok.cicerone.android.support.SupportAppNavigator
 
 class LauncherActivity : BasicActivity<LauncherViewModel>() {
     private val intentChannel = Channel<LauncherIntent>()
-    private val mainscreenNavigationAction : MainscreenNavigationAction by inject()
 
-    override val navigator = Navigator { commands ->
-        commands.forEach {
-            when (it) {
-                is Forward -> {
-                    finish()
-                    when (it.screen) {
-                        is Screens.Mainscreen.Mainscreen ->{
-                            startActivity(mainscreenNavigationAction.provideIntent(this))
-                        }
-                    }
-                }
-            }
-        }
-    }
+    override val navigator = SupportAppNavigator(this, R.id.frameLayout)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

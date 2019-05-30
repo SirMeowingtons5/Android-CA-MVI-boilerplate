@@ -48,4 +48,7 @@ dependencies {
     implementation(Config.Libs.kotlin)
     implementation(Config.Libs.kotlinCoroutines)
     implementation(Config.Libs.kotlinCoroutinesAndroid)
+
+    implementation(Config.Libs.koinTest)
+    implementation(Config.Libs.koinAndroid)
 }
