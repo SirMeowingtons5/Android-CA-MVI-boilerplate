@@ -26,6 +26,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
     implementation(Config.Libs.koinTest)
     implementation(Config.Libs.koinAndroid)
     implementation(Config.Libs.koinAndroidViewModel)

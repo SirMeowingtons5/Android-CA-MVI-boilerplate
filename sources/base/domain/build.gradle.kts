@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":data"))
     implementation(Config.Libs.koinTest)
     implementation(Config.Libs.koinAndroid)
     implementation(Config.Libs.koinAndroidViewModel)

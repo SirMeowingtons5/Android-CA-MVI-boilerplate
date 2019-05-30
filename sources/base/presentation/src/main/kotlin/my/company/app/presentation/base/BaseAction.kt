@@ -1,3 +1,3 @@
 package my.company.app.presentation.base
 
-interface BaseAction
+internal interface BaseAction

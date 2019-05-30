@@ -1,8 +1,9 @@
 package my.company.app.data.injection
 
-import my.company.app.data.remote.GithubGateway
-import my.company.app.data.remote.implementation.GithubGatewayImpl
-import my.company.app.data.remote.rest.GithubRestApi
+import my.company.app.data.gateway.GithubGatewayImpl
+import my.company.app.data.repository.GithubRepository
+import my.company.app.data.repository.implementation.GithubRepositoryImpl
+import my.company.app.data.repository.remote.rest.GithubRestApi
 import okhttp3.OkHttpClient
 import org.koin.dsl.module.module
 import retrofit2.Retrofit
@@ -27,5 +28,6 @@ val DataModule = module {
                 .create(GithubRestApi::class.java)
     }
 
-    single { GithubGatewayImpl(get()) } bind GithubGateway::class
+    single { GithubGatewayImpl(get()) } bind my.company.app.domain.gateway.GithubGateway::class
+    single { GithubRepositoryImpl(get()) } bind GithubRepository::class
 }

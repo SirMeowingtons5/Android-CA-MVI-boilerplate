@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_user.view.*
-import my.company.app.R
+import my.company.app.mainscreen.R
 import my.company.app.presentation.mainscreen.githubpage.model.GithubUserView
 
-class GithubUsersAdapter(val data: List<GithubUserView>, val listener: (GithubUserView) -> Unit)
+class GithubUsersAdapter(private val data: List<GithubUserView>, private val listener: (GithubUserView) -> Unit)
     : RecyclerView.Adapter<GithubUsersAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false))
