@@ -1,6 +1,6 @@
 package my.company.app.presentation.mainscreen.githubpage
 
-import my.company.app.domain.model.GithubUser
+import my.company.app.domain.entity.GithubUser
 import my.company.app.presentation.base.Mapper
 import my.company.app.presentation.mainscreen.githubpage.model.GithubUserView
 

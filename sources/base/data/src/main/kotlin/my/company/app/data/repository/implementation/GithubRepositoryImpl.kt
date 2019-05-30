@@ -3,7 +3,7 @@ package my.company.app.data.repository.implementation
 import my.company.app.data.repository.GithubRepository
 import my.company.app.data.repository.mapper.GithubUserMapper
 import my.company.app.data.repository.remote.rest.GithubRestApi
-import my.company.app.domain.model.GithubUser
+import my.company.app.domain.entity.GithubUser
 
 internal class GithubRepositoryImpl(private val githubRestApi: GithubRestApi): GithubRepository {
     private val mapper = GithubUserMapper()

@@ -27,9 +27,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(Config.Libs.koinTest)
-    implementation(Config.Libs.koinAndroid)
-    implementation(Config.Libs.koinAndroidViewModel)
+    implementation(Config.Libs.koin)
 
     implementation(Config.Libs.kotlin)
     implementation(Config.Libs.kotlinCoroutines)

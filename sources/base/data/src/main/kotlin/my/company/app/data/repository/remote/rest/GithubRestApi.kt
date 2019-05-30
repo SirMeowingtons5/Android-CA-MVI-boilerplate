@@ -1,6 +1,6 @@
 package my.company.app.data.repository.remote.rest
 
-import my.company.app.data.repository.model.GithubUserEntity
+import my.company.app.data.repository.model.RemoteGithubUser
 import retrofit2.Call
 import retrofit2.http.GET
 
@@ -9,5 +9,5 @@ import retrofit2.http.GET
  */
 internal interface GithubRestApi{
     @GET("bins/154gl0")
-    fun getTopUsers(): Call<List<GithubUserEntity>>
+    fun getTopUsers(): Call<List<RemoteGithubUser>>
 }

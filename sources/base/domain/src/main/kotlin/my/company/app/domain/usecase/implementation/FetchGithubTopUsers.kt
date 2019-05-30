@@ -2,7 +2,7 @@ package my.company.app.domain.usecase.implementation
 
 import kotlinx.coroutines.*
 import my.company.app.domain.gateway.GithubGateway
-import my.company.app.domain.model.GithubUser
+import my.company.app.domain.entity.GithubUser
 import my.company.app.domain.usecase.GetGithubTopUsersUseCase
 
 

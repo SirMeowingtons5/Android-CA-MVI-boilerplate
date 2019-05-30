@@ -3,9 +3,8 @@ package my.company.app.presentation.mainscreen.githubpage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.ReceiveChannel
-import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.launch
-import my.company.app.domain.model.GithubUser
+import my.company.app.domain.entity.GithubUser
 import my.company.app.domain.usecase.GetGithubTopUsersUseCase
 import my.company.app.presentation.basic.IntentViewModel
 import my.company.app.presentation.mainscreen.githubpage.model.GithubUserView
