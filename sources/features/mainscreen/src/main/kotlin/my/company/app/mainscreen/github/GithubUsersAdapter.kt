@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.item_user.view.*
 import my.company.app.mainscreen.R
 import my.company.app.presentation.mainscreen.githubpage.model.GithubUserView
 
-class GithubUsersAdapter(private val data: List<GithubUserView>, private val listener: (GithubUserView) -> Unit)
+internal class GithubUsersAdapter(private val data: List<GithubUserView>, private val listener: (GithubUserView) -> Unit)
     : RecyclerView.Adapter<GithubUsersAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false))
