@@ -7,9 +7,8 @@ import kotlinx.android.synthetic.main.fragment_github.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.launch
-import my.company.app.R
+import my.company.app.mainscreen.R
 import my.company.app.presentation.basic.BasicFragment
 import my.company.app.presentation.mainscreen.githubpage.GithubPageIntent
 import my.company.app.presentation.mainscreen.githubpage.GithubPageViewModel
@@ -18,7 +17,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.toast
 import timber.log.Timber
 
-class GithubPageFragment : BasicFragment<GithubPageViewModel>(){
+class GithubPageFragment : BasicFragment<GithubPageViewModel>() {
     override val layoutId = R.layout.fragment_github
     private val intentChannel = Channel<GithubPageIntent>()
 
@@ -33,24 +32,24 @@ class GithubPageFragment : BasicFragment<GithubPageViewModel>(){
         }
     }
 
-    private fun subscribeForStateUpdates(){
-        GlobalScope.launch(Dispatchers.Main){
-            viewModel.states().consumeEach{ state ->
-                when(state){
-                    is GithubPageViewState.GithubUsersUiModel ->{
-                        when(state){
-                            is GithubPageViewState.GithubUsersUiModel.InProgress ->{
+    private fun subscribeForStateUpdates() {
+        GlobalScope.launch(Dispatchers.Main) {
+            for (state in viewModel.states()) {
+                when (state) {
+                    is GithubPageViewState.GithubUsersUiModel -> {
+                        when (state) {
+                            is GithubPageViewState.GithubUsersUiModel.InProgress -> {
                                 Timber.d("State: In progress")
                             }
-                            is GithubPageViewState.GithubUsersUiModel.Success ->{
+                            is GithubPageViewState.GithubUsersUiModel.Success -> {
                                 Timber.d("State: Success. Res number is: ${state.users?.size}")
-                                 state.users?.let { usersList ->
-                                     recycler.adapter = GithubUsersAdapter(usersList){
-                                         toast("Link: ${it.url}")
-                                     }
+                                state.users?.let { usersList ->
+                                    recycler.adapter = GithubUsersAdapter(usersList) {
+                                        toast("Link: ${it.url}")
+                                    }
                                 }
                             }
-                            is GithubPageViewState.GithubUsersUiModel.Failed ->{
+                            is GithubPageViewState.GithubUsersUiModel.Failed -> {
                                 Timber.d("State: Failed")
                             }
                         }
@@ -65,7 +64,7 @@ class GithubPageFragment : BasicFragment<GithubPageViewModel>(){
         super.onDestroyView()
     }
 
-    private fun sendIntent(intent: GithubPageIntent){
+    private fun sendIntent(intent: GithubPageIntent) {
         GlobalScope.launch {
             Timber.d("Sending intent")
             intentChannel.send(intent)

@@ -26,10 +26,12 @@ android {
 }
 
 dependencies {
-    implementation(Config.Libs.koinTest)
-    implementation(Config.Libs.koinAndroid)
-    implementation(Config.Libs.koinAndroidViewModel)
+    implementation(project(":domain"))
+    implementation(Config.Libs.koin)
 
     implementation(Config.Libs.kotlin)
     implementation(Config.Libs.kotlinCoroutines)
+
+    implementation(Config.Libs.retrofit)
+    implementation(Config.Libs.retrofitGson)
 }

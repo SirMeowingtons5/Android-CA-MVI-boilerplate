@@ -1,4 +1,3 @@
 package my.company.app.presentation.base
 
-interface BaseViewState {
-}
+interface BaseViewState

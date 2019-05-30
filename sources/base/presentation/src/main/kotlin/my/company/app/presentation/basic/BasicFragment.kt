@@ -1,6 +1,5 @@
 package my.company.app.presentation.basic
 
-import android.arch.lifecycle.ViewModel
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.annotation.LayoutRes

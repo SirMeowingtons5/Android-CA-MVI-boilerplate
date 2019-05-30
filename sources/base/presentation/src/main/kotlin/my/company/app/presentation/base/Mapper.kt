@@ -8,7 +8,7 @@ package my.company.app.presentation.base
  * @param <E> the remote model input type
  * @param <D> the model return type
  */
-interface Mapper<E, D> {
+internal interface Mapper<E, D> {
 
     fun mapFromEntity(type: E): D
 

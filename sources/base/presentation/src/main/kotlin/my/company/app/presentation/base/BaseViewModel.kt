@@ -8,5 +8,4 @@ interface BaseViewModel<I : BaseIntent, S : BaseViewState> {
 
     fun states(): ReceiveChannel<S>
 
-
 }

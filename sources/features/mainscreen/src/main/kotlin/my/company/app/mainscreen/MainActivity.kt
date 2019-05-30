@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
-import my.company.app.R
 import my.company.app.mainscreen.github.GithubPageFragment
 import my.company.app.presentation.basic.BasicActivity
 import my.company.app.presentation.mainscreen.MainscreenIntent

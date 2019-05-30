@@ -5,6 +5,9 @@ Welcome 👋 This is a boilerplate project that implements MVI + Clean Architect
 ### Disclaimer
 Note: this is a work-in-progress project, it may change significantly.
 
+## Project's board on Trello
+* [Here](https://trello.com/b/RQf9GjH6/android-mvi-boilerplate)
+
 ## Languages, libraries and tools used
 
 * [Kotlin](https://kotlinlang.org/)
