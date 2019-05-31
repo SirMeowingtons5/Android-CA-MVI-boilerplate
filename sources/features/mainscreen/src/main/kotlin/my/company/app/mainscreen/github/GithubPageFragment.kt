@@ -9,7 +9,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import my.company.app.mainscreen.R
-import my.company.app.presentation.basic.BasicFragment
+import my.company.app.coreui.basic.BasicFragment
 import my.company.app.presentation.mainscreen.githubpage.GithubPageIntent
 import my.company.app.presentation.mainscreen.githubpage.GithubPageViewModel
 import my.company.app.presentation.mainscreen.githubpage.GithubPageViewState

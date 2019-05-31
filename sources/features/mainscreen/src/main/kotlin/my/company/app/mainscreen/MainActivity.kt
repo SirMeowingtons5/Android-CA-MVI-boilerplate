@@ -4,7 +4,7 @@ import android.os.Bundle
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
-import my.company.app.presentation.basic.BasicActivity
+import my.company.app.coreui.basic.BasicActivity
 import my.company.app.presentation.mainscreen.MainscreenIntent
 import my.company.app.presentation.mainscreen.MainscreenViewModel
 import ru.terrakok.cicerone.Navigator

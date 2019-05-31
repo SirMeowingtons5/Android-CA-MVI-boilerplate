@@ -29,6 +29,7 @@ android {
 
 dependencies {
     implementation(project(":presentation"))
+    implementation(project(":coreui"))
 
     implementation(Config.Libs.appCompat)
     implementation(Config.Libs.cardView)

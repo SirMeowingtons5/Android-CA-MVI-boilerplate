@@ -16,6 +16,7 @@ base("app")
 base("domain")
 base("data")
 base("presentation")
+base("coreui")
 
 feature("launcher")
 feature("mainscreen")

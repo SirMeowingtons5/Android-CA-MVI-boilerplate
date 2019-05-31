@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.Coroutines
-
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -16,9 +14,8 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-            consumerProguardFiles("proguard-rules.pro")
         }
     }
     sourceSets {
@@ -30,19 +27,23 @@ android {
 
 dependencies {
     implementation(project(":presentation"))
-    implementation(project(":coreui"))
 
     implementation(Config.Libs.appCompat)
+    implementation(Config.Libs.cardView)
+    implementation(Config.Libs.constraintLayout)
+    implementation(Config.Libs.design)
 
     implementation(Config.Libs.cicerone)
 
-    implementation(Config.Libs.koinTest)
+    implementation(Config.Libs.koin)
     implementation(Config.Libs.koinAndroid)
     implementation(Config.Libs.koinAndroidViewModel)
 
-    implementation(Config.Libs.lifecycle)
-
     implementation(Config.Libs.kotlin)
     implementation(Config.Libs.kotlinCoroutines)
-    implementation(Config.Libs.kotlinCoroutinesAndroid)
+
+    implementation(Config.Libs.timber)
+
+    implementation(Config.Libs.retrofit)
+    implementation(Config.Libs.retrofitGson)
 }

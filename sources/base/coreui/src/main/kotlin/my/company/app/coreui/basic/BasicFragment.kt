@@ -1,4 +1,4 @@
-package my.company.app.presentation.basic
+package my.company.app.coreui.basic
 
 import android.os.Bundle
 import android.support.annotation.CallSuper
@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import my.company.app.presentation.basic.IntentViewModel
 import org.koin.android.viewmodel.ext.android.viewModelByClass
 import java.lang.reflect.ParameterizedType
 

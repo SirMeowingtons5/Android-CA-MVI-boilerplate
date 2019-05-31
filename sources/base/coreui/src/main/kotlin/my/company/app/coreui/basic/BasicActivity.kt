@@ -1,10 +1,9 @@
-package my.company.app.presentation.basic
+package my.company.app.coreui.basic
 
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v7.app.AppCompatActivity
-import kotlinx.coroutines.channels.Channel
-import my.company.app.presentation.base.BaseIntent
+import my.company.app.presentation.basic.IntentViewModel
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModelByClass
 import ru.terrakok.cicerone.Navigator
@@ -18,7 +17,7 @@ abstract class BasicActivity<VM: IntentViewModel<*, *>>: AppCompatActivity() {
 
     protected val viewModel : VM by viewModelByClass(getClassByReflection().kotlin)
 
-    protected val navigationHolder: NavigatorHolder by inject()
+    private val navigationHolder: NavigatorHolder by inject()
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
