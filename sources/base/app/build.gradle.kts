@@ -45,10 +45,11 @@ android {
 }
 
 dependencies {
+    implementation(project(":presentation"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":presentation"))
 
+    implementation(project(":coreui"))
     implementation(project(":launcher"))
     implementation(project(":mainscreen"))
 

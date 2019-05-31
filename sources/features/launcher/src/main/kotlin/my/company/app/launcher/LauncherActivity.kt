@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
-import my.company.app.presentation.basic.BasicActivity
+import my.company.app.coreui.basic.BasicActivity
 import my.company.app.presentation.launcher.LauncherIntent
 import my.company.app.presentation.launcher.LauncherViewModel
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
